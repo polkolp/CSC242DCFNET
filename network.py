@@ -1,7 +1,11 @@
 import torch.nn as nn
 import torch
 
-
+def mulconj(x1, x2): # define multiplying a complex conjugate
+    out_real = x1[..., 0] * x2[..., 0] + x1[..., 1] * x2[..., 1]
+    out_imag = x1[..., 1] * x2[..., 0] - x1[..., 0] * x2[..., 1]
+    return torch.stack((out_real, out_imag), -1)
+    
 class DCFNetFeature(nn.Module):
     def __init__(self):
         super(DCFNetFeature, self).__init__()
@@ -25,6 +29,8 @@ class DCFNet(nn.Module):
         # xf: the fourier transformation of target patch x.
         self.xf = None
         self.config = config
+        
+
 
     def forward(self, z):
         """
@@ -33,12 +39,15 @@ class DCFNet(nn.Module):
 
         You are required to calculate response using self.wf to do cross correlation on the searching patch z
         """
+        with torch.no_grad()
         # obtain feature of z and add hanning window
         z = self.feature(z) * self.config.cos_window
         # TODO: You are required to calculate response using self.wf to do cross correlation on the searching patch z
         # put your code here
-
-
+        
+        zf = torch.rfft(z, signal_ndim=2) # fourier transform of z
+        wfzf = torch.sum(mulconj(zf, self.wf), dim=1, keepdim=True) # the thing inside brackets
+        response = torch.irfft(wfzf, signal_ndim=2)
 
         return response
 
@@ -60,9 +69,23 @@ class DCFNet(nn.Module):
                     Shape (1, channel, crop_sz, crop_sz//2+1, 2)
         """
         # x: feature of patch x with hanning window. Shape (1, 32, crop_sz, crop_sz)
+        print(x.size())
         x = self.feature(x) * self.config.cos_window
         # TODO: calculate self.xf and self.wf
         # put your code here
+        xf = torch.rfft(x, signal_ndim=2)
+        denominator = torch.sum(torch.sum(xf ** 2, dim=4, keepdim=True), dim=1, keepdim=True) + self.config.lambda0 # denominator
+        numerator = mulconj(xf, self.config.yf) # numerator
+        wf = numerator/denominator # fourier transform of wl
+#        kzzf = torch.sum(torch.sum(zf ** 2, dim=4, keepdim=True), dim=1, keepdim=True)
+#        alphaf = self.config.yf / (kzzf + self.config.lambda0)
+        if lr == 1:
+            self.wf = wf
+            self.xf = xf
+        else:
+            self.wf = (1 - lr) * self.wf + lr * wf
+            self.xf = (1 - lr) * self.xf + lr * xf
+        
 
 
 
