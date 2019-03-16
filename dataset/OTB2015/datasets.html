@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="tracker_benchmark.css" type="text/css" />
+<title>Visual Tracker Benchmark</title>
+</head>
+<body>
+<div id="fwtitle">
+<div id="toptitle">
+<h1>Visual Tracker Benchmark</h1>
+<div id="subtitle"><a href="http://www.visual-tracking.net" target="blank">http://www.visual-tracking.net</a></div>
+</div>
+</div>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<!--div class="menu-category">VisualTrackerBenchmark</div-->
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="datasets.html" class="current">Datasets</a></div>
+<div class="menu-item"><a href="benchmark.html">Benchmark</a></div>
+<div class="menu-item"><a href="benchmark_v10.html">v1.0</a></div>
+<div class="menu-item"><a href="https://groups.google.com/d/forum/visual-tracking">Community</a></div>
+</td>
+</tr>
+<tr>
+<td id="layout-content">
+<h2>Datasets</h2>
+<p>The full benchmark contains 100 sequences from recent literatures.</p>
+<ul>
+<li><p>The sequence names are in CamelCase without any blanks or underscores (_).</p>
+</li>
+<li><p>When there exist multiple targets each target is identified as dot+id_number (e.g. Jogging.1 and Jogging.2).</p>
+</li>
+<li><p>Each row in the ground-truth files represents the bounding box of the target in that frame,<br /> (x, y, box-width, box-height).</p>
+</li>
+<li><p>In most sequences the first row corresponds to the first frame and the last row to the last frame, except the following sequences:</p>
+<ul>
+<li><p>David(300:770), Football1(1:74), Freeman3(1:460), Freeman4(1:283).</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h3>TB-50 Sequences.</h3>
+<table id="motion" class="seqtable">
+<tr class="r1"><td class="c1"><img src="seq/Basketball.png" width=100px /><br />
+<a href="seq/Basketball.zip" target="blank">Basketball</a> <br />
+<small> IV, OCC, DEF, OPR, BC </small> </td><td class="c2">
+<img src="seq/Biker.png" width=100px /><br />
+<a href="seq/Biker.zip" target="blank">Biker</a> <br />
+<small> SV, OCC, MB, FM, OPR, OV, LR </small> </td><td class="c3">
+<img src="seq/Bird1.png" width=100px /><br />
+<a href="seq/Bird1.zip" target="blank">Bird1</a> <br />
+<small> DEF, FM, OV </small> </td><td class="c4">
+<img src="seq/BlurBody.png" width=100px /><br />
+<a href="seq/BlurBody.zip" target="blank">BlurBody</a> <br />
+<small> SV, DEF, MB, FM, IPR </small> </td><td class="c5">
+<img src="seq/BlurCar2.png" width=100px /><br />
+<a href="seq/BlurCar2.zip" target="blank">BlurCar2</a> <br />
+<small> SV, MB, FM </small> </td><td class="c6">
+<img src="seq/BlurFace.png" width=100px /><br />
+<a href="seq/BlurFace.zip" target="blank">BlurFace</a> <br />
+<small> MB, FM, IPR </small> </td><td class="c7">
+<img src="seq/BlurOwl.png" width=100px /><br />
+<a href="seq/BlurOwl.zip" target="blank">BlurOwl</a> <br />
+<small> SV, MB, FM, IPR </small> </td></tr>
+<tr class="r2"><td class="c1">
+
+<img src="seq/Bolt.png" width=100px /><br />
+<a href="seq/Bolt.zip" target="blank">Bolt</a> <br />
+<small> OCC, DEF, IPR, OPR </small> </td><td class="c2">
+<img src="seq/Box.png" width=100px /><br />
+<a href="seq/Box.zip" target="blank">Box</a> <br />
+<small> IV, SV, OCC, MB, IPR, OPR, OV, BC, LR </small> </td><td class="c3">
+<img src="seq/Car1.png" width=100px /><br />
+<a href="seq/Car1.zip" target="blank">Car1</a> <br />
+<small> IV, SV, MB, FM, BC, LR </small> </td><td class="c4">
+<img src="seq/Car4.png" width=100px /><br />
+<a href="seq/Car4.zip" target="blank">Car4</a> <br />
+<small> IV, SV </small> </td><td class="c5">
+<img src="seq/CarDark.png" width=100px /><br />
+<a href="seq/CarDark.zip" target="blank">CarDark</a> <br />
+<small> IV, BC </small> </td><td class="c6">
+<img src="seq/CarScale.png" width=100px /><br />
+<a href="seq/CarScale.zip" target="blank">CarScale</a> <br />
+<small> SV, OCC, FM, IPR, OPR </small> </td><td class="c7">
+<img src="seq/ClifBar.png" width=100px /><br />
+<a href="seq/ClifBar.zip" target="blank">ClifBar</a> <br />
+<small> SV, OCC, MB, FM, IPR, OV, BC </small> </td></tr>
+<tr class="r3"><td class="c1">
+
+<img src="seq/Couple.png" width=100px /><br />
+<a href="seq/Couple.zip" target="blank">Couple</a> <br />
+<small> SV, DEF, FM, OPR, BC </small> </td><td class="c2">
+<img src="seq/Crowds.png" width=100px /><br />
+<a href="seq/Crowds.zip" target="blank">Crowds</a> <br />
+<small> IV, DEF, BC </small> </td><td class="c3">
+<img src="seq/David.png" width=100px /><br />
+<a href="seq/David.zip" target="blank">David</a> <br />
+<small> IV, SV, OCC, DEF, MB, IPR, OPR </small> </td><td class="c4">
+<img src="seq/Deer.png" width=100px /><br />
+<a href="seq/Deer.zip" target="blank">Deer</a> <br />
+<small> MB, FM, IPR, BC, LR </small> </td><td class="c5">
+<img src="seq/Diving.png" width=100px /><br />
+<a href="seq/Diving.zip" target="blank">Diving</a> <br />
+<small> SV, DEF, IPR </small> </td><td class="c6">
+<img src="seq/DragonBaby.png" width=100px /><br />
+<a href="seq/DragonBaby.zip" target="blank">DragonBaby</a> <br />
+<small> SV, OCC, MB, FM, IPR, OPR, OV </small> </td><td class="c7">
+<img src="seq/Dudek.png" width=100px /><br />
+<a href="seq/Dudek.zip" target="blank">Dudek</a> <br />
+<small> SV, OCC, DEF, FM, IPR, OPR, OV, BC </small> </td></tr>
+<tr class="r4"><td class="c1">
+
+<img src="seq/Football.png" width=100px /><br />
+<a href="seq/Football.zip" target="blank">Football</a> <br />
+<small> OCC, IPR, OPR, BC </small> </td><td class="c2">
+<img src="seq/Freeman4.png" width=100px /><br />
+<a href="seq/Freeman4.zip" target="blank">Freeman4</a> <br />
+<small> SV, OCC, IPR, OPR </small> </td><td class="c3">
+<img src="seq/Girl.png" width=100px /><br />
+<a href="seq/Girl.zip" target="blank">Girl</a> <br />
+<small> SV, OCC, IPR, OPR </small> </td><td class="c4">
+<img src="seq/Human3.png" width=100px /><br />
+<a href="seq/Human3.zip" target="blank">Human3</a> <br />
+<small> SV, OCC, DEF, OPR, BC </small> </td><td class="c5">
+<img src="seq/Human4.png" width=100px /><br />
+<a href="seq/Human4.zip" target="blank">Human4</a> <br />
+<small> IV, SV, OCC, DEF </small> </td><td class="c6">
+<img src="seq/Human6.png" width=100px /><br />
+<a href="seq/Human6.zip" target="blank">Human6</a> <br />
+<small> SV, OCC, DEF, FM, OPR, OV </small> </td><td class="c7">
+<img src="seq/Human9.png" width=100px /><br />
+<a href="seq/Human9.zip" target="blank">Human9</a> <br />
+<small> IV, SV, DEF, MB, FM </small> </td></tr>
+<tr class="r5"><td class="c1">
+
+<img src="seq/Ironman.png" width=100px /><br />
+<a href="seq/Ironman.zip" target="blank">Ironman</a> <br />
+<small> IV, SV, OCC, MB, FM, IPR, OPR, OV, BC, LR </small> </td><td class="c2">
+<img src="seq/Jump.png" width=100px /><br />
+<a href="seq/Jump.zip" target="blank">Jump</a> <br />
+<small> SV, OCC, DEF, MB, FM, IPR, OPR </small> </td><td class="c3">
+<img src="seq/Jumping.png" width=100px /><br />
+<a href="seq/Jumping.zip" target="blank">Jumping</a> <br />
+<small> MB, FM </small> </td><td class="c4">
+<img src="seq/Liquor.png" width=100px /><br />
+<a href="seq/Liquor.zip" target="blank">Liquor</a> <br />
+<small> IV, SV, OCC, MB, FM, OPR, OV, BC </small> </td><td class="c5">
+<img src="seq/Matrix.png" width=100px /><br />
+<a href="seq/Matrix.zip" target="blank">Matrix</a> <br />
+<small> IV, SV, OCC, FM, IPR, OPR, BC </small> </td><td class="c6">
+<img src="seq/MotorRolling.png" width=100px /><br />
+<a href="seq/MotorRolling.zip" target="blank">MotorRolling</a> <br />
+<small> IV, SV, MB, FM, IPR, BC, LR </small> </td><td class="c7">
+<img src="seq/Panda.png" width=100px /><br />
+<a href="seq/Panda.zip" target="blank">Panda</a> <br />
+<small> SV, OCC, DEF, IPR, OPR, OV, LR </small> </td></tr>
+<tr class="r6"><td class="c1">
+
+<img src="seq/RedTeam.png" width=100px /><br />
+<a href="seq/RedTeam.zip" target="blank">RedTeam</a> <br />
+<small> SV, OCC, IPR, OPR, LR </small> </td><td class="c2">
+<img src="seq/Shaking.png" width=100px /><br />
+<a href="seq/Shaking.zip" target="blank">Shaking</a> <br />
+<small> IV, SV, IPR, OPR, BC </small> </td><td class="c3">
+<img src="seq/Singer2.png" width=100px /><br />
+<a href="seq/Singer2.zip" target="blank">Singer2</a> <br />
+<small> IV, DEF, IPR, OPR, BC </small> </td><td class="c4">
+<img src="seq/Skating1.png" width=100px /><br />
+<a href="seq/Skating1.zip" target="blank">Skating1</a> <br />
+<small> IV, SV, OCC, DEF, OPR, BC </small> </td><td class="c5">
+<img src="seq/Skating2.png" width=100px /><br />
+<a href="seq/Skating2.zip" target="blank">Skating2 [1,2]</a> <br />
+<small> SV, OCC, DEF, FM, OPR </small> </td><td class="c6">
+<img src="seq/Skiing.png" width=100px /><br />
+<a href="seq/Skiing.zip" target="blank">Skiing</a> <br />
+<small> IV, SV, DEF, IPR, OPR </small> </td><td class="c7">
+<img src="seq/Soccer.png" width=100px /><br />
+<a href="seq/Soccer.zip" target="blank">Soccer</a> <br />
+<small> IV, SV, OCC, MB, FM, IPR, OPR, BC </small> </td></tr>
+<tr class="r7"><td class="c1">
+
+<img src="seq/Surfer.png" width=100px /><br />
+<a href="seq/Surfer.zip" target="blank">Surfer</a> <br />
+<small> SV, FM, IPR, OPR, LR </small> </td><td class="c2">
+<img src="seq/Sylvester.png" width=100px /><br />
+<a href="seq/Sylvester.zip" target="blank">Sylvester</a> <br />
+<small> IV, IPR, OPR </small> </td><td class="c3">
+<img src="seq/Tiger2.png" width=100px /><br />
+<a href="seq/Tiger2.zip" target="blank">Tiger2</a> <br />
+<small> IV, OCC, DEF, MB, FM, IPR, OPR, OV </small> </td><td class="c4">
+<img src="seq/Trellis.png" width=100px /><br />
+<a href="seq/Trellis.zip" target="blank">Trellis</a> <br />
+<small> IV, SV, IPR, OPR, BC </small> </td><td class="c5">
+<img src="seq/Walking.png" width=100px /><br />
+<a href="seq/Walking.zip" target="blank">Walking</a> <br />
+<small> SV, OCC, DEF </small> </td><td class="c6">
+<img src="seq/Walking2.png" width=100px /><br />
+<a href="seq/Walking2.zip" target="blank">Walking2</a> <br />
+<small> SV, OCC, LR </small> </td><td class="c7">
+<img src="seq/Woman.png" width=100px /><br />
+<a href="seq/Woman.zip" target="blank">Woman</a> <br />
+<small> IV, SV, OCC, DEF, MB, FM, OPR </small></td></tr>
+
+</td></tr></table>
+<h3>The rest of TB-100 Sequences</h3>
+<table id="motion" class="seqtable">
+<tr class="r1"><td class="c1"><img src="seq/Bird2.png" width=100px /><br />
+<a href="seq/Bird2.zip" target="blank">Bird2</a> <br />
+<small> OCC, DEF, FM, IPR, OPR </small> </td><td class="c2">
+<img src="seq/BlurCar1.png" width=100px /><br />
+<a href="seq/BlurCar1.zip" target="blank">BlurCar1</a> <br />
+<small> MB, FM </small> </td><td class="c3">
+<img src="seq/BlurCar3.png" width=100px /><br />
+<a href="seq/BlurCar3.zip" target="blank">BlurCar3</a> <br />
+<small> MB, FM </small> </td><td class="c4">
+<img src="seq/BlurCar4.png" width=100px /><br />
+<a href="seq/BlurCar4.zip" target="blank">BlurCar4</a> <br />
+<small> MB, FM </small> </td><td class="c5">
+<img src="seq/Board.png" width=100px /><br />
+<a href="seq/Board.zip" target="blank">Board</a> <br />
+<small> SV, MB, FM, OPR, OV, BC </small> </td><td class="c6">
+<img src="seq/Bolt2.png" width=100px /><br />
+<a href="seq/Bolt2.zip" target="blank">Bolt2</a> <br />
+<small> DEF, BC </small> </td><td class="c7">
+<img src="seq/Boy.png" width=100px /><br />
+<a href="seq/Boy.zip" target="blank">Boy</a> <br />
+<small> SV, MB, FM, IPR, OPR </small> </td></tr>
+<tr class="r2"><td class="c1">
+
+<img src="seq/Car2.png" width=100px /><br />
+<a href="seq/Car2.zip" target="blank">Car2</a> <br />
+<small> IV, SV, MB, FM, BC </small> </td><td class="c2">
+<img src="seq/Car24.png" width=100px /><br />
+<a href="seq/Car24.zip" target="blank">Car24</a> <br />
+<small> IV, SV, BC </small> </td><td class="c3">
+<img src="seq/Coke.png" width=100px /><br />
+<a href="seq/Coke.zip" target="blank">Coke</a> <br />
+<small> IV, OCC, FM, IPR, OPR, BC </small> </td><td class="c4">
+<img src="seq/Coupon.png" width=100px /><br />
+<a href="seq/Coupon.zip" target="blank">Coupon</a> <br />
+<small> OCC, BC </small> </td><td class="c5">
+<img src="seq/Crossing.png" width=100px /><br />
+<a href="seq/Crossing.zip" target="blank">Crossing</a> <br />
+<small> SV, DEF, FM, OPR, BC </small> </td><td class="c6">
+<img src="seq/Dancer.png" width=100px /><br />
+<a href="seq/Dancer.zip" target="blank">Dancer</a> <br />
+<small> SV, DEF, IPR, OPR </small> </td><td class="c7">
+<img src="seq/Dancer2.png" width=100px /><br />
+<a href="seq/Dancer2.zip" target="blank">Dancer2</a> <br />
+<small> DEF </small> </td></tr>
+<tr class="r3"><td class="c1">
+
+<img src="seq/David2.png" width=100px /><br />
+<a href="seq/David2.zip" target="blank">David2</a> <br />
+<small> IPR, OPR </small> </td><td class="c2">
+<img src="seq/David3.png" width=100px /><br />
+<a href="seq/David3.zip" target="blank">David3</a> <br />
+<small> OCC, DEF, OPR, BC </small> </td><td class="c3">
+<img src="seq/Dog.png" width=100px /><br />
+<a href="seq/Dog.zip" target="blank">Dog</a> <br />
+<small> SV, DEF, OPR </small> </td><td class="c4">
+<img src="seq/Dog1.png" width=100px /><br />
+<a href="seq/Dog1.zip" target="blank">Dog1</a> <br />
+<small> SV, IPR, OPR </small> </td><td class="c5">
+<img src="seq/Doll.png" width=100px /><br />
+<a href="seq/Doll.zip" target="blank">Doll</a> <br />
+<small> IV, SV, OCC, IPR, OPR </small> </td><td class="c6">
+<img src="seq/FaceOcc1.png" width=100px /><br />
+<a href="seq/FaceOcc1.zip" target="blank">FaceOcc1</a> <br />
+<small> OCC </small> </td><td class="c7">
+<img src="seq/FaceOcc2.png" width=100px /><br />
+<a href="seq/FaceOcc2.zip" target="blank">FaceOcc2</a> <br />
+<small> IV, OCC, IPR, OPR </small> </td></tr>
+<tr class="r4"><td class="c1">
+
+<img src="seq/Fish.png" width=100px /><br />
+<a href="seq/Fish.zip" target="blank">Fish</a> <br />
+<small> IV </small> </td><td class="c2">
+<img src="seq/FleetFace.png" width=100px /><br />
+<a href="seq/FleetFace.zip" target="blank">FleetFace</a> <br />
+<small> SV, DEF, MB, FM, IPR, OPR </small> </td><td class="c3">
+<img src="seq/Football1.png" width=100px /><br />
+<a href="seq/Football1.zip" target="blank">Football1</a> <br />
+<small> IPR, OPR, BC </small> </td><td class="c4">
+<img src="seq/Freeman1.png" width=100px /><br />
+<a href="seq/Freeman1.zip" target="blank">Freeman1</a> <br />
+<small> SV, IPR, OPR </small> </td><td class="c5">
+<img src="seq/Freeman3.png" width=100px /><br />
+<a href="seq/Freeman3.zip" target="blank">Freeman3</a> <br />
+<small> SV, IPR, OPR </small> </td><td class="c6">
+<img src="seq/Girl2.png" width=100px /><br />
+<a href="seq/Girl2.zip" target="blank">Girl2</a> <br />
+<small> SV, OCC, DEF, MB, OPR </small> </td><td class="c7">
+<img src="seq/Gym.png" width=100px /><br />
+<a href="seq/Gym.zip" target="blank">Gym</a> <br />
+<small> SV, DEF, IPR, OPR </small> </td></tr>
+<tr class="r5"><td class="c1">
+
+<img src="seq/Human2.png" width=100px /><br />
+<a href="seq/Human2.zip" target="blank">Human2</a> <br />
+<small> IV, SV, MB, OPR </small> </td><td class="c2">
+<img src="seq/Human5.png" width=100px /><br />
+<a href="seq/Human5.zip" target="blank">Human5</a> <br />
+<small> SV, OCC, DEF </small> </td><td class="c3">
+<img src="seq/Human7.png" width=100px /><br />
+<a href="seq/Human7.zip" target="blank">Human7</a> <br />
+<small> IV, SV, OCC, DEF, MB, FM </small> </td><td class="c4">
+<img src="seq/Human8.png" width=100px /><br />
+<a href="seq/Human8.zip" target="blank">Human8</a> <br />
+<small> IV, SV, DEF </small> </td><td class="c5">
+<img src="seq/Jogging.png" width=100px /><br />
+<a href="seq/Jogging.zip" target="blank">Jogging [1,2]</a> <br />
+<small> OCC, DEF, OPR </small> </td><td class="c6">
+<img src="seq/KiteSurf.png" width=100px /><br />
+<a href="seq/KiteSurf.zip" target="blank">KiteSurf</a> <br />
+<small> IV, OCC, IPR, OPR </small> </td><td class="c7">
+<img src="seq/Lemming.png" width=100px /><br />
+<a href="seq/Lemming.zip" target="blank">Lemming</a> <br />
+<small> IV, SV, OCC, FM, OPR, OV </small> </td></tr>
+<tr class="r6"><td class="c1">
+
+<img src="seq/Man.png" width=100px /><br />
+<a href="seq/Man.zip" target="blank">Man</a> <br />
+<small> IV </small> </td><td class="c2">
+<img src="seq/Mhyang.png" width=100px /><br />
+<a href="seq/Mhyang.zip" target="blank">Mhyang</a> <br />
+<small> IV, DEF, OPR, BC </small> </td><td class="c3">
+<img src="seq/MountainBike.png" width=100px /><br />
+<a href="seq/MountainBike.zip" target="blank">MountainBike</a> <br />
+<small> IPR, OPR, BC </small> </td><td class="c4">
+<img src="seq/Rubik.png" width=100px /><br />
+<a href="seq/Rubik.zip" target="blank">Rubik</a> <br />
+<small> SV, OCC, IPR, OPR </small> </td><td class="c5">
+<img src="seq/Singer1.png" width=100px /><br />
+<a href="seq/Singer1.zip" target="blank">Singer1</a> <br />
+<small> IV, SV, OCC, OPR </small> </td><td class="c6">
+<img src="seq/Skater.png" width=100px /><br />
+<a href="seq/Skater.zip" target="blank">Skater</a> <br />
+<small> SV, DEF, IPR, OPR </small> </td><td class="c7">
+<img src="seq/Skater2.png" width=100px /><br />
+<a href="seq/Skater2.zip" target="blank">Skater2</a> <br />
+<small> SV, DEF, FM, IPR, OPR </small> </td></tr>
+<tr class="r7"><td class="c1">
+
+<img src="seq/Subway.png" width=100px /><br />
+<a href="seq/Subway.zip" target="blank">Subway</a> <br />
+<small> OCC, DEF, BC </small> </td><td class="c2">
+<img src="seq/Suv.png" width=100px /><br />
+<a href="seq/Suv.zip" target="blank">Suv</a> <br />
+<small> OCC, IPR, OV </small> </td><td class="c3">
+<img src="seq/Tiger1.png" width=100px /><br />
+<a href="seq/Tiger1.zip" target="blank">Tiger1</a> <br />
+<small> IV, OCC, DEF, MB, FM, IPR, OPR </small> </td><td class="c4">
+<img src="seq/Toy.png" width=100px /><br />
+<a href="seq/Toy.zip" target="blank">Toy</a> <br />
+<small> SV, FM, IPR, OPR </small> </td><td class="c5">
+<img src="seq/Trans.png" width=100px /><br />
+<a href="seq/Trans.zip" target="blank">Trans</a> <br />
+<small> IV, SV, OCC, DEF </small> </td><td class="c6">
+<img src="seq/Twinnings.png" width=100px /><br />
+<a href="seq/Twinnings.zip" target="blank">Twinnings</a> <br />
+<small> SV, OPR </small> </td><td class="c7">
+<img src="seq/Vase.png" width=100px /><br />
+<a href="seq/Vase.zip" target="blank">Vase</a> <br />
+<small> SV, FM, IPR </small></td></tr>
+
+</td></tr></table>
+<h2>Attributes</h2>
+<p>We have manually tagged the test sequences with 9 attributes, which represents the challenging aspects in visual tracking.</p>
+<table id="motion" class="attrtable">
+<tr class="r1"><td class="c1">NAME </td><td class="c2"> DESCRIPTION </td></tr>
+<tr class="r2"><td class="c1">
+IV </td><td class="c2">
+Illumination Variation - the illumination in the target region is significantly changed.<br />
+<span id='attrlist'> Basketball, Box, Car1, Car2, Car24, Car4, CarDark, Coke, Crowds, David, Doll, FaceOcc2, Fish, Human2, Human4.2, Human7, Human8, Human9, Ironman, KiteSurf, Lemming, Liquor, Man, Matrix, Mhyang, MotorRolling, Shaking, Singer1, Singer2, Skating1, Skiing, Soccer, Sylvester, Tiger1, Tiger2, Trans, Trellis, Woman
+</span> </td></tr>
+<tr class="r3"><td class="c1">
+
+SV </td><td class="c2">
+Scale Variation – the ratio of the bounding boxes of the first frame and the current frame is out of the range <a href="1/ts," target="blank">ts</a>, ts &gt; 1 (ts=2).<br />
+<span id=attrlist> Biker, BlurBody, BlurCar2, BlurOwl, Board, Box, Boy, Car1, Car24, Car4, CarScale, ClifBar, Couple, Crossing, Dancer, David, Diving, Dog, Dog1, Doll, DragonBaby, Dudek, FleetFace, Freeman1, Freeman3, Freeman4, Girl, Girl2, Gym, Human2, Human3, Human4.2, Human5, Human6, Human7, Human8, Human9, Ironman, Jump, Lemming, Liquor, Matrix, MotorRolling, Panda, RedTeam, Rubik, Shaking, Singer1, Skater, Skater2, Skating1, Skating2.1, Skating2.2, Skiing, Soccer, Surfer, Toy, Trans, Trellis, Twinnings, Vase, Walking, Walking2, Woman </span> </td></tr>
+<tr class="r4"><td class="c1">
+
+OCC </td><td class="c2">
+Occlusion – the target is partially or fully occluded.<br />
+<span id=attrlist> Basketball, Biker, Bird2, Bolt, Box, CarScale, ClifBar, Coke, Coupon, David, David3, Doll, DragonBaby, Dudek, FaceOcc1, FaceOcc2, Football, Freeman4, Girl, Girl2, Human3, Human4.2, Human5, Human6, Human7, Ironman, Jogging.1, Jogging.2, Jump, KiteSurf, Lemming, Liquor, Matrix, Panda, RedTeam, Rubik, Singer1, Skating1, Skating2.1, Skating2.2, Soccer, Subway, Suv, Tiger1, Tiger2, Trans, Walking, Walking2, Woman </span> </td></tr>
+<tr class="r5"><td class="c1">
+
+DEF </td><td class="c2">
+Deformation – non-rigid object deformation.<br />
+<span id=attrlist> Basketball, Bird1, Bird2, BlurBody, Bolt, Bolt2, Couple, Crossing, Crowds, Dancer, Dancer2, David, David3, Diving, Dog, Dudek, FleetFace, Girl2, Gym, Human3, Human4.2, Human5, Human6, Human7, Human8, Human9, Jogging.1, Jogging.2, Jump, Mhyang, Panda, Singer2, Skater, Skater2, Skating1, Skating2.1, Skating2.2, Skiing, Subway, Tiger1, Tiger2, Trans, Walking, Woman </span> </td></tr>
+<tr class="r6"><td class="c1">
+
+MB </td><td class="c2">
+Motion Blur – the target region is blurred due to the motion of target or camera.<br />
+<span id=attrlist> Biker, BlurBody, BlurCar1, BlurCar2, BlurCar3, BlurCar4, BlurFace, BlurOwl, Board, Box, Boy, ClifBar, David, Deer, DragonBaby, FleetFace, Girl2, Human2, Human7, Human9, Ironman, Jump, Jumping, Liquor, MotorRolling, Soccer, Tiger1, Tiger2, Woman </span> </td></tr>
+<tr class="r7"><td class="c1">
+
+FM </td><td class="c2">
+Fast Motion – the motion of the ground truth is larger than tm pixels (tm=20).<br />
+<span id=attrlist> Biker, Bird1, Bird2, BlurBody, BlurCar1, BlurCar2, BlurCar3, BlurCar4, BlurFace, BlurOwl, Board, Boy, CarScale, ClifBar, Coke, Couple, Deer, DragonBaby, Dudek, FleetFace, Human6, Human7, Human9, Ironman, Jumping, Lemming, Liquor, Matrix, MotorRolling, Skater2, Skating2.1, Skating2.2, Soccer, Surfer, Tiger1, Tiger2, Toy, Vase, Woman </span> </td></tr>
+<tr class="r8"><td class="c1">
+
+IPR </td><td class="c2">
+In-Plane Rotation – the target rotates in the image plane.<br />
+<span id=attrlist> Bird2, BlurBody, BlurFace, BlurOwl, Bolt, Box, Boy, CarScale, ClifBar, Coke, Dancer, David, David2, Deer, Diving, Dog1, Doll, DragonBaby, Dudek, FaceOcc2, FleetFace, Football, Football1, Freeman1, Freeman3, Freeman4, Girl, Gym, Ironman, Jump, KiteSurf, Matrix, MotorRolling, MountainBike, Panda, RedTeam, Rubik, Shaking, Singer2, Skater, Skater2, Skiing, Soccer, Surfer, Suv, Sylvester, Tiger1, Tiger2, Toy, Trellis, Vase </span> </td></tr>
+<tr class="r9"><td class="c1">
+
+OPR </td><td class="c2">
+Out-of-Plane Rotation – the target rotates out of the image plane.<br />
+<span id=attrlist> Basketball, Biker, Bird2, Board, Bolt, Box, Boy, CarScale, Coke, Couple, Dancer, David, David2, David3, Dog, Dog1, Doll, DragonBaby, Dudek, FaceOcc2, FleetFace, Football, Football1, Freeman1, Freeman3, Freeman4, Girl, Girl2, Gym, Human2, Human3, Human6, Ironman, Jogging.1, Jogging.2, Jump, KiteSurf, Lemming, Liquor, Matrix, Mhyang, MountainBike, Panda, RedTeam, Rubik, Shaking, Singer1, Singer2, Skater, Skater2, Skating1, Skating2.1, Skating2.2, Skiing, Soccer, Surfer, Sylvester, Tiger1, Tiger2, Toy, Trellis, Twinnings, Woman </span> </td></tr>
+<tr class="r10"><td class="c1">
+
+OV </td><td class="c2">
+Out-of-View – some portion of the target leaves the view.<br />
+<span id=attrlist> Biker, Bird1, Board, Box, ClifBar, DragonBaby, Dudek, Human6, Ironman, Lemming, Liquor, Panda, Suv, Tiger2 </span> </td></tr>
+<tr class="r11"><td class="c1">
+
+BC </td><td class="c2">
+Background Clutters – the background near the target has the similar color or texture as the target.<br />
+<span id=attrlist> Basketball, Board, Bolt2, Box, Car1, Car2, Car24, CarDark, ClifBar, Couple, Coupon, Crossing, Crowds, David3, Deer, Dudek, Football, Football1, Human3, Ironman, Liquor, Matrix, Mhyang, MotorRolling, MountainBike, Shaking, Singer2, Skating1, Soccer, Subway, Trellis </span> </td></tr>
+<tr class="r12"><td class="c1">
+
+LR </td><td class="c2">
+Low Resolution – the number of pixels inside the ground-truth bounding box is less than tr (tr =400).<br />
+<span id=attrlist> Biker, Car1, Freeman3, Freeman4, Panda, RedTeam, Skiing, Surfer, Walking </span></td></tr>
+
+</td></tr></table>
+<p><br />
+<hr></p>
+</td>
+</tr>
+</table>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
